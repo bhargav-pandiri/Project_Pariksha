@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+<style>
+     *{
+        margin: 0;
+        padding: 0;
+        font-family: 'poppins',sans-serif;
+        box-sizing: border-box;
+     }
+     .container{
+        width:100%;
+        min-height: 100vh;
+        background-image: linear-gradient(#FDF0D1,#AC7D88),url(static/assets/exam.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 10px 8%;
+     }
+     .logo{
+        width: 180px;
+        cursor: pointer;
+     }
+     nav ul{
+        list-style: none;
+        width: 100%;
+        text-align: right;
+        padding-right: 60px;
+     }
+     nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+     }
+     nav ul li{
+        display: inline-block;
+        margin: 10px 20px;
+     }
+     nav ul li a{
+        color: #AC7D88;
+        text-decoration: none;
+     }
+     nav ul li a:hover{
+        color: #AC7D88;
+     }
+     .btn{
+        display: flex;
+        align-items: center; 
+        padding: 1px 2px;
+        border: 0;
+        outline: 0;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 1px;
+        height: 1px;
+     }
+     .btn img{
+        width: 20px;
+        margin-right: 10px;
+     }
+     .content{
+        margin-top: 14%;
+        color: #fff;
+        max-width: 620px;
+     }
+     .content h1{
+        font-size: 70px;
+        font-weight: 600;
+        line-height: 85px;
+        margin-bottom: 25px;
+     }
+     .content form{
+        display: flex;
+        align-items: center;
+        background: #FDF0D1;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 30px;
+     }
+     .content form input{
+         border: 0;
+         outline: 0;
+         width: 100%;
+         font-size: 30px;
+         padding-left: 10px;
+     }
+     .content form button{
+        font-size: 15px;
+        padding: 10px 30px;
+        background-color: #643843;
+        color: #AC7D88;
+     }
+</style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="logo.png" alt="" class="logo">
+            <ul>
+                <li><a href= {{url_for('login')}}>student login</a></li>
+                <li><a href={{url_for('login')}}>faculity login</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>onlineExam<br>check the knowledge</h1>
+            <p>check  knowledge, skill, aptitude, 
+                or classification in many topics.</p>
+            <form>
+                <input type="text" placeholder="Exam Name">
+                <button type="submit" class="bttn">Search</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
